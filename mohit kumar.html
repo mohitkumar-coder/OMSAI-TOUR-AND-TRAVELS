@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OM SAI TOUR AND TRAVELS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e2e2e2, #ffffff); /* Elegant gradient background */
+            text-align: center;
+            overflow-x: hidden;
+            color: #333; /* Dark text color for better readability */
+        }
+        header {
+            background: linear-gradient(135deg, #004d40, #00796b); /* Classy green gradient */
+            color: #fff;
+            padding: 1.5em;
+            border-bottom: 4px solid #ff5722; /* Accent color */
+            animation: slideInFromTop 1s ease-out;
+            font-weight: bold; /* Bold text in header */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        nav {
+            margin: 1.5em 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1s forwards;
+        }
+        nav a {
+            margin: 0 1.5em;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold; /* Bold text in navigation */
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            animation: slideInFromLeft 0.5s ease-out;
+            font-size: 18px; /* Larger font size */
+        }
+        nav a:hover {
+            color: #ffeb3b; /* Highlight color on hover */
+            transform: scale(1.1); /* Slightly zoom in */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .content {
+            background: #ffffff; /* White background for content sections */
+            padding: 2.5em;
+            margin-top: 2em;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 12px; /* More rounded corners */
+            animation: fadeIn 1s ease-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            transform: translateY(-5px); /* Lift effect */
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: zoomIn 1s ease-out;
+        }
+        .hero-image:hover {
+            transform: scale(1.05); /* Zoom in on hover */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #ff5722; /* Accent color */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: bounceIn 1s ease-out;
+            font-weight: bold; /* Bold text in button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+        footer {
+            background: linear-gradient(135deg, #004d40, #00796b); /* Classy green gradient */
+            color: #fff;
+            text-align: center;
+            padding: 1.5em;
+            position: relative; /* Ensure tooltip is positioned relative to footer */
+            font-weight: bold; /* Bold text in footer */
+        }
+        footer .tooltip {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        footer .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 150px; /* Adjust width of tooltip */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: -50px; /* Position below the footer */
+            left: 50%;
+            margin-left: -75px; /* Center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        footer .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            nav a {
+                display: block;
+                margin: 0.5em 0;
+            }
+        }
+        @keyframes slideInFromTop {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes bounceIn {
+            from { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to OM SAI TOUR AND TRAVELS</h1> <!-- Updated header text -->
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="content" id="home">
+            <h2>Home</h2>
+            <img src="https://via.placeholder.com/1200x500" alt="Hero Image" class="hero-image">
+            <p>Welcome to the home page of OM SAI TOUR AND TRAVELS. Explore the sections to learn more about our offerings.</p>
+            <button onclick="alert('Button Clicked!')">Click Me</button>
+        </div>
+
+        <div class="content" id="about">
+            <h2>About</h2>
+            <p>Learn more about our mission, vision, and the team behind OM SAI TOUR AND TRAVELS. We're here to provide you with the best experience.</p>
+        </div>
+
+        <div class="content" id="services">
+            <h2>Services</h2>
+            <p>Discover the range of travel services we offer:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin: 1em 0; font-size: 18px; font-weight: bold;">Scorpio for one day: <strong>₹5500</strong></li>
+                <li style="margin: 1em 0; font-size: 18px; font-weight: bold;">Vitara Brezza for one day: <strong>₹5000</strong></li>
+            </ul>
+        </div>
+
+        <div class="content" id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us through the contact details below:</p>
+            <p>Phone 1: <a href="tel:+9835969882" style="color: #00796b; text-decoration: none;">9835969882</a></p>
+            <p>Phone 2: <a href="tel:+9939287115" style="color: #00796b; text-decoration: none;">9939287115</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="tooltip">
+            <p>&copy; 2024 OM SAI TOUR AND TRAVELS. All rights reserved.</p>
+            <span class="tooltiptext">Published by Mohit Kumar</span>
+        </div>
+    </footer>
+
+</body>
+</html>
